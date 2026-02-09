@@ -1,0 +1,242 @@
+/* ===============================
+   GLOBAL
+   =============================== */
+body {
+    background: #f5f8ff;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ===============================
+   WRAPPER
+   =============================== */
+.register-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+/* ===============================
+   CARD
+   =============================== */
+.register-card {
+    width: 100%;
+    max-width: 520px;
+    padding: 40px 38px;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid rgba(11,87,208,0.12);
+    box-shadow:
+        0 20px 40px rgba(2,6,23,0.08),
+        0 6px 20px rgba(2,6,23,0.06);
+    animation: slideUp 0.48s cubic-bezier(.2,.9,.3,1);
+}
+
+/* ===============================
+   LOGO
+   =============================== */
+.logo-wrapper {
+    width: 80px;
+    height: 80px;
+    background: #2F7AE5;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    box-shadow: 0 8px 22px rgba(11,87,208,0.35);
+}
+
+.logo-wrapper svg,
+.logo-wrapper img {
+    width: 48px;
+    height: 48px;
+    color: #ffffff;
+}
+
+/* ===============================
+   TITLES
+   =============================== */
+.register-title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.register-subtitle {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+/* ===============================
+   FORM
+   =============================== */
+.register-form {
+    margin-top: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #334155;
+}
+
+/* ===============================
+   INPUTS
+   =============================== */
+.input-wrapper {
+    position: relative;
+    margin-top: 6px;
+}
+
+.input-wrapper svg {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    color: #64748b;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 16px 12px 44px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.22s ease;
+    background: #ffffff;
+}
+
+.input-wrapper input::placeholder {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.input-wrapper input:focus {
+    border-color: #2F7AE5;
+    box-shadow: 0 0 0 3px rgba(11,87,208,0.2);
+}
+
+/* ===============================
+   ERROR
+   =============================== */
+.error-text {
+    color: #ef4444;
+    font-size: 13px;
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+/* ===============================
+   SUBMIT BUTTON
+   =============================== */
+.submit-btn {
+    margin-top: 8px;
+    height: 48px;
+    border-radius: 12px;
+    background: #2F7AE5;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    box-shadow: 0 10px 28px rgba(11,87,208,0.35);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 36px rgba(11,87,208,0.45);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ===============================
+   FOOTER TEXT
+   =============================== */
+.login-text {
+    text-align: center;
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 22px;
+}
+
+.login-text button {
+    background: none;
+    border: none;
+    color: #2F7AE5;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.login-text button:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   ANIMATION
+   =============================== */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+@media (max-width: 560px) {
+    .register-card {
+        padding: 20px;
+        border-radius: 12px;
+        margin: 12px;
+    }
+
+    .logo-wrapper {
+        width: 56px;
+        height: 56px;
+    }
+
+    .register-title {
+        font-size: 20px;
+    }
+
+    .input-wrapper input {
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 380px) {
+    .register-card {
+        padding: 16px;
+    }
+
+    .register-form {
+        gap: 14px;
+    }
+}
